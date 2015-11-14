@@ -1,0 +1,23 @@
+prestamo:
+    resource: "@PrestamoBundle/Resources/config/routing.php"
+    prefix:   /
+
+administrador:
+    resource: "@AdministradorBundle/Resources/config/routing.php"
+    prefix:   /
+
+diario:
+    resource: "@DiarioBundle/Resources/config/routing.php"
+    prefix:   /
+
+lector:
+    resource: "@LectorBundle/Resources/config/routing.php"
+    prefix:   /
+
+login:
+    resource: "@LoginBundle/Resources/config/routing.php"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

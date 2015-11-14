@@ -1,0 +1,21 @@
+# app/config/security.yml
+security:
+    firewalls:
+        secured_area:
+            pattern: ^/
+            anonymous: ~
+            form_login:
+                login_path: login
+                check_path: login_check
+                default_target_path: /nuevoPrestamo
+            logout:
+                path: /logout
+                target: /login
+    access_control:
+        - { path: /login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: ROLE_ADMINISTRADOR }
+    providers:
+        usuarios:
+            entity: { class: AdministradorBundle\Entity\Administrador, property: idadmin }
+    encoders:
+        AdministradorBundle\Entity\Administrador: plaintext
