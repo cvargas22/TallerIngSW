@@ -21,9 +21,9 @@ class Diario
     private $codigo;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="fecha_ingreso", type="date", nullable=false)
+     * @ORM\Column(name="fecha_ingreso", type="string", nullable=false)
      */
     private $fechaIngreso;
 
