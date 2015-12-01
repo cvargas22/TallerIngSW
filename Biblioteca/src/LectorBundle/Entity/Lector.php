@@ -35,9 +35,9 @@ class Lector
     private $sexo;
 
     /**
-     * @var \DateTime
+     * @var \string
      *
-     * @ORM\Column(name="fnac", type="date", nullable=false)
+     * @ORM\Column(name="fnac", type="string", nullable=false)
      */
     private $fnac;
 
@@ -230,5 +230,10 @@ class Lector
     public function getEmail()
     {
         return $this->email;
+    }
+
+    public function __toString()
+    {
+        return $this->getRut();
     }
 }

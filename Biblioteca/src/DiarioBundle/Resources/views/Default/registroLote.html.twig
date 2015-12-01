@@ -2,45 +2,6 @@
 
 {% block title %} Diarios {% endblock %}
 
-{% block stylesheets %}
-        <link href="{{ asset('bundles/login/css/estilos.css') }}" type="text/css" rel="stylesheet" />
-    {% endblock %}
-{#{% block javascripts %} <script type="text/javascript" src="js/login.js"></script> 
-{% endblock %}#}
-
-{% block navigation %}
-<ul id="menu-bar">
-    <li id="prestamo" class="not-active"><a href="#">Préstamo</a>
-        <ul>
-            <li><a href="nuevoPrestamo" onclick="changeClass('prestamo')">Nuevo prestamo</a></li>
-            <li><a href="#" onclick="changeClass('prestamo')">Buscar prestamo</a></li>
-        </ul>
-    </li>
-    <li id="usuarios" class="not-active"><a href="#">Usuarios</a>
-        <ul>
-            <li><a href="registroLector" onclick="changeClass('usuarios')">Registrar usuario</a></li>
-            <li><a href="registroAdministrador" onclick="changeClass('usuarios')">Registrar administrador</a></li>
-            <li><a href="#" onclick="changeClass('usuarios')">Buscar usuarios</a></li>
-        </ul>
-    </li>
-    <li id="diarios" class="active"><a href="#">Diarios</a>
-        <ul>
-            <li><a href="registroLote" onclick="changeClass('diarios')">Registrar lote</a></li>
-            <li><a href="#" onclick="changeClass('diarios')">Buscar lote</a></li>
-        </ul>
-    </li>
-    <li id="estadistica" class="not-active"><a href="#">Estadísticas</a>
-        <ul>
-            <li><a href="#" onclick="changeClass('estadistica')">Por edad</a></li>
-            <li><a href="#" onclick="changeClass('estadistica')">Por sexo</a></li>
-            <li><a href="#" onclick="changeClass('estadistica')">Por fechas</a></li>
-        </ul>
-    </li>
-    <li id="salir" class="not-active"><a href="logout" onclick="changeClass('salir')">Salir</a></li>
-</ul>
-{% endblock %}
-
-
 {% block body %}
 <div id="contentwrap">
     <div id="content">

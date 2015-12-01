@@ -8,7 +8,9 @@ $collection = new RouteCollection();
 $collection->add('registroLote', new Route('/registroLote', array(
     '_controller' => 'DiarioBundle:Diario:registroLote',
 )));
+
 $collection->add('buscarLote', new Route('/buscarLote', array(
     '_controller' => 'DiarioBundle:Diario:buscarLote',
 )));
+
 return $collection;

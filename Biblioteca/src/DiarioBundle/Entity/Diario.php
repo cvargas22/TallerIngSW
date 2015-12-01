@@ -76,4 +76,9 @@ class Diario
     {
         return $this->fechaIngreso;
     }
+
+    public function __toString()
+    {
+        return $this->getCodigo();
+    }
 }

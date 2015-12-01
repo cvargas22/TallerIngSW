@@ -25,14 +25,21 @@ class DiarioController extends Controller
 		    $em->persist($diario);
 		    $em->flush();
 
-		    echo "Diario creado";
+            return $this->render('DiarioBundle:Default:nuevoLote.html.twig', 
+            array('diario' => $diario)
+            );
     	}
 
-        return $this->render('DiarioBundle:Default:registroLote.html.twig');
+        return $this->render('DiarioBundle:Default:registroLote.html.twig'
+            );
     }
 
     public function buscarLoteAction()
     {
-        return $this->render('DiarioBundle:Default:buscarLote.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $diarios = $em->getRepository('DiarioBundle:Diario')->findAll();
+        return $this->render('DiarioBundle:Default:buscarLote.html.twig',
+            array('diarios' => $diarios)
+        );
     }
 }

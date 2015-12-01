@@ -52,9 +52,9 @@ class Prestamo
     private $lector;
 
     /**
-     * @var \DateTime
+     * @var \string
      *
-     * @ORM\Column(name="fecha_prestamo", type="date", nullable=false)
+     * @ORM\Column(name="fecha_prestamo", type="string", nullable=false)
      */
     private $fechaPrestamo;
 
@@ -194,5 +194,10 @@ class Prestamo
     public function getLector()
     {
         return $this->lector;
+    }
+
+    public function __toString()
+    {
+        return $this->getIdprestamo();
     }
 }

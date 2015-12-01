@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block title %} Diarios {% endblock %}
+
+{% block body %}
+<div id="contentwrap">
+    <div id="content">
+        <h1>Diarios</h1>
+        <ul>
+            {% for diario in diarios %}
+            <ul>
+                <li>Código: {{ diario.codigo|e }}</li>
+                <li>Ingresado el: {{ diario.fechaIngreso|e }}</li>
+                <br>
+            </ul>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
