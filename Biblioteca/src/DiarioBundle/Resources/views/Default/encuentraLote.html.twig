@@ -15,6 +15,11 @@
                 </div>
             </div>
         </form>
+        {% if lote == "No" %}
+            <h3>No existe el lote</h3>
+        {% else %}
+            <h3>Lote encontrado {{ lote }} Ingresado el {{ lote.fechaIngreso }}</h3>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

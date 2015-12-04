@@ -34,12 +34,23 @@ class DiarioController extends Controller
             );
     }
 
-    public function buscarLoteAction()
+    public function buscarLoteAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
-        $diarios = $em->getRepository('DiarioBundle:Diario')->findAll();
-        return $this->render('DiarioBundle:Default:buscarLote.html.twig',
-            array('diarios' => $diarios)
-        );
+        $codLote = $request->get('CodLote');
+        if($codLote){
+            $em = $this->getDoctrine()->getManager();
+            $lote = $em->getRepository('DiarioBundle:Diario')->find($codLote);
+            if($lote){
+                return $this->render('DiarioBundle:Default:EncuentraLote.html.twig',
+                    array('lote' => $lote)
+                );
+            }
+            else{
+                return $this->render('DiarioBundle:Default:EncuentraLote.html.twig',
+                    array('lote' => "No")
+                );
+            }
+        }
+        return $this->render('DiarioBundle:Default:buscarLote.html.twig');
     }
 }

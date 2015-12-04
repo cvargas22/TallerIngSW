@@ -31,7 +31,7 @@ class LectorController extends Controller
     		$lector->setEmail($eMail);
 
     		$em = $this->getDoctrine()->getManager();
-		    $em->persist($lector);
+		    $em->merge($lector);
 		    $em->flush();
 
             return $this->render('LectorBundle:Default:nuevoLector.html.twig', 
@@ -40,6 +40,25 @@ class LectorController extends Controller
     	}
 
         return $this->render('LectorBundle:Default:registroLector.html.twig');
+    }
+
+    public function buscarLectorAction(Request $request){
+        $run = $request->get('RUN');
+        if($run){
+            $em = $this->getDoctrine()->getManager();
+            $lector = $em->getRepository('LectorBundle:Lector')->find($run);
+            if($lector){
+                return $this->render('LectorBundle:Default:EncuentraLector.html.twig',
+                    array('lector' => $lector)
+                );
+            }
+            else{
+                return $this->render('DiarioBundle:Default:EncuentraLector.html.twig',
+                    array('lote' => "No")
+                );
+            }
+        }
+        return $this->render('LectorBundle:Default:buscarLector.html.twig');
     }
 
 }
