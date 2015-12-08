@@ -65,8 +65,8 @@ p {
   background: #FFFFFF;
     border-radius: 10px;
     border: 1px solid #ebebeb;
-    margin: 5px;
-    margin-left: 93%;
+    margin: 5px -95% 5px 95%;
+    /*margin-left: 93%;*/
 }
 
 #footerwrap {
@@ -413,7 +413,9 @@ p {
     background-color: #CCCCCC; 
     color: #222222; 
 } 
-.field{ 
+.field{
     margin-bottom: 5px; 
     width: 200px;
 } 
+
+label.error { color: #D60404;}

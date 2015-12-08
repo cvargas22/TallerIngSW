@@ -15,7 +15,6 @@ class PrestamoController extends Controller
     	$rut = $request->get('RUN');
     	$codLote = $request->get('CodLote');
     	$fecha = $request->get('Fecha');
-    	$estado = True;
     	if($rut){
     		$lector = $em->getRepository('LectorBundle:Lector')->find($rut);
     		$admin = $em->getRepository('AdministradorBundle:Administrador')->find('admin');
@@ -24,7 +23,6 @@ class PrestamoController extends Controller
     		$prestamo->setAdministrador($admin);
     		$prestamo->setDiario($diario);
     		$prestamo->setLector($lector);
-    		$prestamo->setEstado($estado);
     		$prestamo->setFechaPrestamo($fecha);
 
     		$em = $this->getDoctrine()->getManager();

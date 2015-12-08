@@ -53,8 +53,8 @@ class LectorController extends Controller
                 );
             }
             else{
-                return $this->render('DiarioBundle:Default:EncuentraLector.html.twig',
-                    array('lote' => "No")
+                return $this->render('LectorBundle:Default:EncuentraLector.html.twig',
+                    array('lector' => "No")
                 );
             }
         }

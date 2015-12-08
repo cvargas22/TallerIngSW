@@ -15,7 +15,7 @@ class Lector
     /**
      * @var string
      *
-     * @ORM\Column(name="rut", type="string", length=10, nullable=false)
+     * @ORM\Column(name="rut", type="string", length=12, nullable=false)
      * @ORM\Id
      */
     private $rut;
@@ -61,6 +61,20 @@ class Lector
      * @ORM\Column(name="email", type="string", length=45, nullable=true)
      */
     private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="profesion", type="string", length=45, nullable=true)
+     */
+    private $profesion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="institucion", type="string", length=45, nullable=true)
+     */
+    private $institucion;
 
 
 
@@ -230,6 +244,54 @@ class Lector
     public function getEmail()
     {
         return $this->email;
+    }
+
+    /**
+     * Set profesion
+     *
+     * @param string $profesion
+     *
+     * @return Lector
+     */
+    public function setProfesion($profesion)
+    {
+        $this->profesion = $profesion;
+
+        return $this;
+    }
+
+    /**
+     * Get profesion
+     *
+     * @return string
+     */
+    public function getProfesion()
+    {
+        return $this->profesion;
+    }
+
+    /**
+     * Set institucion
+     *
+     * @param string $institucion
+     *
+     * @return Lector
+     */
+    public function setInstitucion($institucion)
+    {
+        $this->institucion = $institucion;
+
+        return $this;
+    }
+
+    /**
+     * Get institucion
+     *
+     * @return string
+     */
+    public function getInstitucion()
+    {
+        return $this->institucion;
     }
 
     public function __toString()

@@ -59,14 +59,6 @@ class Prestamo
     private $fechaPrestamo;
 
     /**
-     * @var boolean
-     *
-     * @ORM\Column(name="estado", type="boolean", nullable=false)
-     */
-    private $estado;
-
-
-    /**
      * Get idprestamo
      *
      * @return integer
@@ -98,30 +90,6 @@ class Prestamo
     public function getFechaPrestamo()
     {
         return $this->fechaPrestamo;
-    }
-
-    /**
-     * Set estado
-     *
-     * @param boolean $estado
-     *
-     * @return Prestamo
-     */
-    public function setEstado($estado)
-    {
-        $this->estado = $estado;
-
-        return $this;
-    }
-
-    /**
-     * Get estado
-     *
-     * @return boolean
-     */
-    public function getEstado()
-    {
-        return $this->estado;
     }
 
     /**
