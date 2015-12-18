@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block title %} Diarios {% endblock %}
+
+{% block body %}
+<div id="contentwrap">
+    <div id="content">
+        <h3>Diario creado con éxito. Código: {{ diario }}</h3>
+        <form id="form" action="" class="form" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8">
+            <h1>Registrar Lote</h1>
+            <div class="content">
+                <div class="intro"></div>
+                <div id="section0" >
+                    <div class="field"><label for="CodLote">Código Lote</label><input type="text" id="CodLote" name="CodLote" maxlength="6" required></div>
+                    <div class="field"><div class="edit-options"><div class="edit"></div><div class="delete"></div></div><label for="Fecha">Fecha</label><input type="date" id="Fecha" name="Fecha" value="" required></div><br>
+                    <div class="field"><input class="boton" type="submit" id="Listo" name="Listo" required value="Registrar"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

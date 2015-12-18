@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+{% block title %} Prestamos {% endblock %}
+
+
+{% block body %}
+<div id="contentwrap">
+    <div id="content">
+        <form id="form" class="form" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8">
+            <h1>Nuevo Préstamo</h1>
+            <div class="content">
+                <div class="intro"></div>
+                <div id="section0" >
+                    <div class="field"><label for="RUN">RUN Usuario</label><input type="text" id="RUN" name="RUN" maxlength="12" class="required rut" required></div>
+                    <div class="field"><label for="CodLote">Código Lote</label><input type="text" id="CodLote" name="CodLote" maxlength="6" required></div>
+                    <div class="field"><div class="edit-options"><div class="edit"></div><div class="delete"></div></div><label for="Fecha">Fecha</label><input type="date" id="Fecha" name="Fecha" value="" required></div><br>
+                    <div class="field"><input class="boton" type="submit" id="Listo" name="Listo" required value="Prestar"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

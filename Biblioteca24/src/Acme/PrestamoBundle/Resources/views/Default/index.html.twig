@@ -1,0 +1,30 @@
+{% extends '::baseLogin.html.twig' %}
+
+{% block title %} Login {% endblock %}
+
+{% block stylesheets %}
+        <link href="{{ asset('bundles/login/css/estilos.css') }}" type="text/css" rel="stylesheet" />
+    {% endblock %}
+{#{% block javascripts %} <script type="text/javascript" src="js/login.js"></script> 
+{% endblock %}#}
+
+{% block body %}
+<div id="loginwrap">
+        <div id="login">
+            {% if error %}
+            <div>{{ error.message }}</div>
+            {% endif %}
+            <form class="form-container" action="{{ path('login_check') }}" method="post">
+                <div class="form-title"><h2>Bienvenido</h2></div>
+                <div class="form-title">Usuario</div>
+                <input class="form-field" type="text" name="_username" value="{{ last_username }}"/><br />
+                <div class="form-title">Contraseña</div>
+                <input class="form-field" type="password" name="_password" /><br />
+                <div class="submit-container">
+                    <input class="boton" type="submit" value="Ingresar" />
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+	
