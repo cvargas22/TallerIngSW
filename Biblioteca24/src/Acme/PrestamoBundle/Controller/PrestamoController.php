@@ -2,7 +2,7 @@
 
 namespace Acme\PrestamoBundle\Controller;
 
-use PrestamoBundle\Entity\Prestamo;
+use Acme\PrestamoBundle\Entity\Prestamo;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,8 +12,8 @@ class PrestamoController extends Controller
     public function nuevoPrestamoAction(Request $request)
     {
     	$em = $this->getDoctrine()->getEntityManager();
-    	$rut = $request->get('RUN');
-    	$codLote = $request->get('CodLote');
+    	$rut = $request->get('RUN_p');
+    	$codLote = $request->get('CodLote_p');
     	$fecha = $request->get('Fecha');
     	if($rut){
     		$lector = $em->getRepository('LectorBundle:Lector')->find($rut);

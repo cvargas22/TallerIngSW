@@ -11,12 +11,13 @@
             <div class="content">
                 <div class="intro"></div>
                 <div id="section0" >
-                    <div class="field"><label for="Nombre">Nombre</label><input type="text" id="Nombre" name="Nombre" required></div>
-                    <div class="field"><label for="Usuario">Usuario</label><input type="text" id="Usuario" name="Usuario" required></div>
-                    <div class="field"><div class="edit-options"><div class="edit"></div><div class="delete"></div></div><label for="pass">Contraseña</label><input type="password" id="pass" name="pass" required></div>
-                    <div class="field"><div class="edit-options"><div class="edit"></div><div class="delete"></div></div><label for="pass">Repetir Contraseña</label><input type="password" id="pass" name="pass" required></div>
-                    <br>
+                    <div class="field"><label for="Nombre">Nombre</label><input type="text" id="Nombre" name="Nombre" required><label class="error">*</label></div>
+                    <div class="field"><label for="Usuario">Usuario</label><input type="text" id="Usuario" name="Usuario" required><label class="error">*</label></div>
+                    <div class="field"><div class="edit-options"><div class="edit"></div><div class="delete"></div></div><label for="pass">Contraseña</label><input type="password" id="pass" name="pass" required><label class="error">*</label></div>
+                    <div class="field"><div class="edit-options"><div class="edit"></div><div class="delete"></div></div><label for="pass2">Repetir Contraseña</label><input type="password" id="pass2" name="pass2" required><label class="error">*</label></div>
+                    <h5 class="error">* Este campo es obligatorio</h5>
                     <div class="field"><input class="boton" type="submit" id="Registrar" name="Registrar" required value="Registrar"></div>
+
                 </div>
             </div>
         </form>

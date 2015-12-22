@@ -369,6 +369,7 @@ p {
     font-size: 14px; 
     display: block; 
 } 
+
 .form input[type=radio], input[type=checkbox]{ 
     margin: 10px; 
     width: 13px; 
@@ -418,4 +419,3 @@ p {
     width: 200px;
 } 
 
-label.error { color: #D60404;}

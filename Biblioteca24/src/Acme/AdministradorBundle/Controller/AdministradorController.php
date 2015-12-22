@@ -3,7 +3,7 @@
 // src/LectorBundle/Controller/LectorController.php
 namespace Acme\AdministradorBundle\Controller;
  
-use AdministradorBundle\Entity\Administrador;
+use Acme\AdministradorBundle\Entity\Administrador;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;

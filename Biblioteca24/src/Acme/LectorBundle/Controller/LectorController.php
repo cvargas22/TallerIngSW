@@ -3,7 +3,7 @@
 // src/LectorBundle/Controller/LectorController.php
 namespace Acme\LectorBundle\Controller;
  
-use LectorBundle\Entity\Lector;
+use Acme\LectorBundle\Entity\Lector;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -47,7 +47,7 @@ class LectorController extends Controller
     }
 
     public function buscarLectorAction(Request $request){
-        $run = $request->get('RUN');
+        $run = $request->get('RUN_b');
         if($run){
             $em = $this->getDoctrine()->getManager();
             $lector = $em->getRepository('LectorBundle:Lector')->find($run);

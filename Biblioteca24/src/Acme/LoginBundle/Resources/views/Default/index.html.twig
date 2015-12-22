@@ -10,10 +10,10 @@
 
 {% block body %}
 <div id="loginwrap">
-        <div id="login">
             {% if error %}
-            <div>{{ error.message }}</div>
+                <div class="error">{{ error.message|trans({},'Usuario o Contraseña incorrectos') }}</div>
             {% endif %}
+        <div id="login">
             <form class="form-container" action="{{ path('login_check') }}" method="post">
                 <div class="form-title"><h2>Bienvenido</h2></div>
                 <div class="form-title">Usuario</div>

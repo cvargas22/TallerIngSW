@@ -95,11 +95,11 @@ class Prestamo
     /**
      * Set administrador
      *
-     * @param \AdministradorBundle\Entity\Administrador $administrador
+     * @param \Acme\AdministradorBundle\Entity\Administrador $administrador
      *
      * @return Prestamo
      */
-    public function setAdministrador(\AdministradorBundle\Entity\Administrador $administrador = null)
+    public function setAdministrador(\Acme\AdministradorBundle\Entity\Administrador $administrador = null)
     {
         $this->administrador = $administrador;
 
@@ -109,7 +109,7 @@ class Prestamo
     /**
      * Get administrador
      *
-     * @return \AdministradorBundle\Entity\Administrador
+     * @return \Acme\AdministradorBundle\Entity\Administrador
      */
     public function getAdministrador()
     {
@@ -119,11 +119,11 @@ class Prestamo
     /**
      * Set diario
      *
-     * @param \DiarioBundle\Entity\Diario $diario
+     * @param \Acme\DiarioBundle\Entity\Diario $diario
      *
      * @return Prestamo
      */
-    public function setDiario(\DiarioBundle\Entity\Diario $diario = null)
+    public function setDiario(\Acme\DiarioBundle\Entity\Diario $diario = null)
     {
         $this->diario = $diario;
 
@@ -133,7 +133,7 @@ class Prestamo
     /**
      * Get diario
      *
-     * @return \DiarioBundle\Entity\Diario
+     * @return \Acme\DiarioBundle\Entity\Diario
      */
     public function getDiario()
     {
@@ -143,11 +143,11 @@ class Prestamo
     /**
      * Set lector
      *
-     * @param \LectorBundle\Entity\Lector $lector
+     * @param \Acme\LectorBundle\Entity\Lector $lector
      *
      * @return Prestamo
      */
-    public function setLector(\LectorBundle\Entity\Lector $lector = null)
+    public function setLector(\Acme\LectorBundle\Entity\Lector $lector = null)
     {
         $this->lector = $lector;
 
@@ -157,7 +157,7 @@ class Prestamo
     /**
      * Get lector
      *
-     * @return \LectorBundle\Entity\Lector
+     * @return \Acme\LectorBundle\Entity\Lector
      */
     public function getLector()
     {

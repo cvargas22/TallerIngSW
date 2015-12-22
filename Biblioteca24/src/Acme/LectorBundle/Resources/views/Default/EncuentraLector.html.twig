@@ -2,6 +2,7 @@
 
 {% block title %} Usuarios {% endblock %}
 
+{% block hover %}<div id="hover"></div>{% endblock %}
 
 {% block body %}
 <div id="contentwrap">
@@ -11,29 +12,35 @@
             <div class="content">
                 <div class="intro"></div>
                 <div id="section0" >
-                    <div class="field"><label for="RUN">RUN</label><input type="text" id="RUN" name="RUN" maxlength="12" class="required rut" required></div>
+                    <div class="field"><label for="RUN_b">RUN</label><input type="text" id="RUN_b" name="RUN_b" maxlength="12" class="required rut" required></div>
                     <div class="field"><input class="boton" type="submit" id="Buscar" name="Buscar" required value="Buscar"></div>
                 </div>
             </div>
         </form>
-        {% if lector == "No" %}
+        <div id="popup">
+        <div id="close">X</div>
+            {% if lector == "No" %}
             <h3>No existe el Lector</h3>
-        {% else %}
+            </div>
+            {% else %}
             <h3>Lector encontrado</h3>
+        </div>
+        
             <form id="form" class="form" method="post" action="registroLector" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8">
             <h1>Editar Lector</h1>
             <div class="content">
                 <div class="intro"></div>
                 <div id="section0" >
-                    <div class="field"><label for="RUN">RUN</label><input type="text" id="RUN" name="RUN" maxlength="12" class="required rut" value={{ lector.rut }} required></div>
-                    <div class="field"><label for="Nombre">Nombre</label><input type="text" id="Nombre" name="Nombre" value={{ lector.nombre }} required></div>
-                    <div class="field"><label for="Sexo">Sexo</label><select id="Sexo" name="Sexo" value={{ lector.sexo }} required><option value="1">Femenino</option><option value="2">Masculino</option><option value="3">Otro</option></select></div>
-                    <div class="field"><label for="FechaNac">Fecha de Nacimiento</label><input type="date" id="FechaNac" name="FechaNac" value={{ lector.fnac }} required></div>
+                    <div class="field"><label for="RUN">RUN</label><input type="text" id="RUN" name="RUN" maxlength="12" class="required rut" value={{ lector.rut }} required><label class="error">*</label></div>
+                    <div class="field"><label for="Nombre">Nombre</label><input type="text" id="Nombre" name="Nombre" value={{ lector.nombre }} required><label class="error">*</label></div>
+                    <div class="field"><label for="Sexo">Sexo</label><select id="Sexo" name="Sexo" value={{ lector.sexo }} required><option value="1">Femenino</option><option value="2">Masculino</option><option value="3">Otro</option></select><label class="error">*</label></div>
+                    <div class="field"><label for="FechaNac">Fecha de Nacimiento</label><input type="date" id="FechaNac" name="FechaNac" value={{ lector.fnac }} required><label class="error">*</label></div>
                     <div class="field"><label for="Profesion">Profesion/Ocupación</label><input type="text" id="Profesion" name="Profesion" value={{ lector.profesion }} ></div>
                     <div class="field"><label for="Instituto">Instituto</label><input type="text" id="Instituto" name="Instituto" value={{ lector.institucion }} ></div>
                     <div class="field"><label for="Direccion">Dirección</label><input type="text" id="Direccion" name="Direccion" value={{ lector.direccion }} ></div>
-                    <div class="field"><label for="Telefono">Telefono</label><input type="number" id="Telefono" name="Telefono" value={{ lector.telefono }} required></div>
-                    <div class="field"><div class="edit-options"><div class="edit"></div><div class="delete"></div></div><label for="eMail">e-Mail</label><input type="email" id="eMail" name="eMail" value={{ lector.email }} ></div><br>
+                    <div class="field"><label for="Telefono">Telefono</label><input type="number" id="Telefono" name="Telefono" value={{ lector.telefono }} required><label class="error">*</label></div>
+                    <div class="field"><div class="edit-options"><div class="edit"></div><div class="delete"></div></div><label for="eMail">e-Mail</label><input type="email" id="eMail" name="eMail" value={{ lector.email }} ></div>
+                    <h5 class="error">* Este campo es obligatorio</h5>
                     <div class="field"><input class="boton" type="submit" id="Editar" name="Editar" required value="Editar"></div>
                 </div>
             </div>
@@ -42,4 +49,21 @@
        
     </div>
 </div>
+<script>
+$(document).ready(function(){
+  
+  //chiusura al click sulla parte scura
+  $("#hover").click(function(){
+        $(this).fadeOut();
+    $("#popup").fadeOut();
+    });
+  
+  //chiusura al click sul pulsante
+  $("#close").click(function(){
+        $("#hover").fadeOut();
+    $("#popup").fadeOut();
+    });
+  
+});
+</script>
 {% endblock %}

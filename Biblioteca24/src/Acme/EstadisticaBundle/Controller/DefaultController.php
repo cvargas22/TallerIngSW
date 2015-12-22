@@ -6,6 +6,8 @@ use Acme\PrestamoBundle\Entity\Prestamo;
 use Acme\LectorBundle\Entity\Lector;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Ob\HighchartsBundle\Highcharts\Highchart;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
@@ -14,8 +16,10 @@ class DefaultController extends Controller
         return $this->render('EstadisticaBundle:Default:index.html.twig', array('name' => $name));
     }
 
-	public function sexoAction()
+	public function sexoAction(Request $request)
 	{
+
+
 		$em = $this->getDoctrine()->getManager();
 		$qb = $em->createQueryBuilder();
 		$date_from = new \DateTime('2015-12-01');
@@ -70,18 +74,6 @@ class DefaultController extends Controller
 	    ));
 	}
 
-	public function calculaedad($fechanacimiento){
-		list($ano,$mes,$dia) = explode("-",$fechanacimiento);
-		$ano_diferencia  = date("Y") - $ano;
-		$mes_diferencia = date("m") - $mes;
-		$dia_diferencia   = date("d") - $dia;
-		if ($dia_diferencia < 0 || $mes_diferencia < 0)
-			$ano_diferencia--;
-		return $ano_diferencia;
-	}
-	 
-	// Modo de uso
-	//echo calculaedad ('1979-10-15'); // Imprimirá: 30
 	public function edadAction()
 	{
 		$em = $this->getDoctrine()->getManager();

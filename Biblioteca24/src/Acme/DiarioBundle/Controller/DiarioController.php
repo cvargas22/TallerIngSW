@@ -4,7 +4,7 @@
 namespace Acme\DiarioBundle\Controller;
  
 
-use DiarioBundle\Entity\Diario;
+use Acme\DiarioBundle\Entity\Diario;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -36,7 +36,7 @@ class DiarioController extends Controller
 
     public function buscarLoteAction(Request $request)
     {
-        $codLote = $request->get('CodLote');
+        $codLote = $request->get('CodLote_b');
         if($codLote){
             $em = $this->getDoctrine()->getManager();
             $lote = $em->getRepository('DiarioBundle:Diario')->find($codLote);
