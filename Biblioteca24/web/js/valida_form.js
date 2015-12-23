@@ -9,13 +9,13 @@ $("#form").validate({
         required: true,
         minlength: 8,
         maxlength: 13,
-        remote: "../bundles/login/php/valida_run.php"
+        remote: "../php/valida_run.php"
       },
       RUN_p: {
         required: true,
         minlength: 8,
         maxlength: 13,
-        remote: "../bundles/login/php/valida_run_p.php"
+        remote: "../php/valida_run_p.php"
       },
       RUN_b: {
         required: true,
@@ -42,14 +42,14 @@ $("#form").validate({
         digits: true,
         minlength: 6,
         maxlength: 6,
-        remote: "../bundles/login/php/valida_codlote.php"
+        remote: "../php/valida_codlote.php"
       },
       CodLote_p: {
         required: true,
         digits: true,
         minlength: 6,
         maxlength: 6,
-        remote: "../bundles/login/php/valida_codlote_p.php"
+        remote: "../php/valida_codlote_p.php"
       },
       CodLote_b: {
         required: true,
@@ -61,7 +61,7 @@ $("#form").validate({
         required: true,
         minlength: 5,
         maxlength: 10,
-        remote: "../bundles/login/php/valida_admin.php"
+        remote: "../php/valida_admin.php"
       },
       Profesion: {
         required: false,

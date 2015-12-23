@@ -108,7 +108,7 @@ p {
   background: -moz-linear-gradient(top,  #A9A9A9,  #7A7A7A);
   border: solid 1px #6D6D6D;
   position:relative;
-  z-index:10;
+  z-index:999;
 }
 #menu-bar li {
   margin: 0px 0px 6px 0px;
@@ -369,6 +369,7 @@ p {
     font-size: 14px; 
     display: block; 
 } 
+
 .form input[type=radio], input[type=checkbox]{ 
     margin: 10px; 
     width: 13px; 
@@ -418,81 +419,3 @@ p {
     width: 200px;
 } 
 
-label.error {    
-  margin-left: 220px;
-    margin-top: -23px;
-    position: absolute;
-font:10px ;
-color:#D60404;
- }
-
- input.error { 
-  box-shadow: 0 0 10px pink;
-border-radius: 4px;
-  border: 1px solid red; 
-}
-
-div.error {    
-  margin: 5px -95% 5px 95%;
-  text-align: center;
-  padding: 5px;
-font:10px ;
-color:#D60404;
-background-color: pink;
-box-shadow: 0 0 10px pink;
-border-radius: 4px;
- }
-
-h5.error{
-  font:10px ;
-color:#D60404;
-}
-
-
-
- /* --------- POPUP ----------- */
-
- #close{
-  position:absolute;
-  background:black;
-  color:white;
-  right:-15px;
-  top:-15px;
-  border-radius:50%;
-  width:30px;
-  height:30px;
-  line-height:30px;
-  text-align:center;
-  font-size:8px;
-  font-weight:bold;
-  font-family:'Arial Black', Arial, sans-serif;
-  cursor:pointer;
-  box-shadow:0 0 10px 0 #000;
-}
-
-#popup{
-  position:absolute;
-  width:600px;
-  height:180px;
-  background:#fff;
-  left:50%;
-  top:50%;
-  border-radius:5px;
-  padding:60px 0;
-  margin-left:-320px; /* width/2 + padding-left */
-  margin-top:-150px; /* height/2 + padding-top */
-  text-align:center;
-  box-shadow:0 0 10px 0 #000;
-    z-index: 11;
-}
-
-#hover{
-  position:fixed;
-  background:#000;
-  width:100%;
-  height:100%;
-  opacity: .6;
-    z-index: 11;
-    margin-left: -8px;
-    margin-top: -8px;
-}

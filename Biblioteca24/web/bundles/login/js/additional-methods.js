@@ -39,15 +39,6 @@
 
 })();
 
-jQuery.validator.addMethod("greaterThan", 
-function(value, element, params) {
-    if (!/Invalid|NaN/.test(new Date(value))) {
-        return new Date(value) >= new Date($(params).val());
-    }
-    return isNaN(value) && isNaN($(params).val()) 
-        || (Number(value) >= Number($(params).val())); 
-},'Must be greater than {0}.');
-
 jQuery.validator.addMethod("letterswithbasicpunc", function(value, element) {
 	return this.optional(element) || /^[a-z\-.,()'\"\s]+$/i.test(value);
 }, "Letters or punctuation only please");

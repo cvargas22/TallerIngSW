@@ -4,9 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d82e3bdda98ec863121032fdce5d50d3",
-    "content-hash": "6472b06536b3d4c40b4fb29dc0a83660",
+    "hash": "8b3d0403691a024ee847157cc9c6fd1b",
+    "content-hash": "f65343e84ef56af40758a22f9759635c",
     "packages": [
+        {
+            "name": "andres-montanez/magallanes",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andres-montanez/Magallanes.git",
+                "reference": "781213dd732be8c2e0f6c430629c0c5ea520405e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andres-montanez/Magallanes/zipball/781213dd732be8c2e0f6c430629c0c5ea520405e",
+                "reference": "781213dd732be8c2e0f6c430629c0c5ea520405e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "malkusch/php-mock": "dev-php-5.3",
+                "phpunit/phpunit": "4.3.5",
+                "satooshi/php-coveralls": ">=0.6.1"
+            },
+            "bin": [
+                "bin/mage"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mage\\": "./Mage",
+                    "Task\\": [
+                        ".mage/tasks",
+                        "../../../.mage/tasks"
+                    ],
+                    "Command\\": [
+                        ".mage/tasks",
+                        "../../../.mage/commands"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Deployment Tool for PHP Applications",
+            "homepage": "http://magephp.com",
+            "keywords": [
+                "deployment"
+            ],
+            "time": "2015-04-12 19:45:32"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.7",
