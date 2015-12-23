@@ -13,6 +13,9 @@ class DiarioController extends Controller
 {
     public function registroLoteAction(Request $request)
     {
+        date_default_timezone_set('UTC');
+        $hoy = date("Y-m-d");
+
     	$codLote = $request->get('CodLote');
     	$fecha = $request->get('Fecha');
 
@@ -26,11 +29,13 @@ class DiarioController extends Controller
 		    $em->flush();
 
             return $this->render('DiarioBundle:Default:nuevoLote.html.twig', 
-            array('diario' => $diario)
-            );
+            array('diario' => $diario,
+                'hoy' => $hoy
+            ));
     	}
 
-        return $this->render('DiarioBundle:Default:registroLote.html.twig'
+        return $this->render('DiarioBundle:Default:registroLote.html.twig',
+            array('hoy' => $hoy)
             );
     }
 

@@ -13,9 +13,10 @@
                 <div class="intro"></div>
                 
                 <div id="section0" >
-                    <div class="field"><label for="RUN_p">RUN Usuario</label><input type="text" id="RUN_p" name="RUN_p" maxlength="12" class="required rut" required></div>
-                    <div class="field"><label for="CodLote_p">Código Lote</label><input type="text" id="CodLote_p" name="CodLote_p" maxlength="6" required></div>
-                    <div class="field"><div class="edit-options"><div class="edit"></div><div class="delete"></div></div><label for="Fecha">Fecha</label><input type="date" id="Fecha" name="Fecha" value="" required></div><br>
+                    <div class="field"><label for="RUN_p">RUN Usuario</label><input type="text" id="RUN_p" name="RUN_p" maxlength="12" class="required rut" required><label class="error">*</label></div>
+                    <div class="field"><label for="CodLote_p">Código Lote</label><input type="text" id="CodLote_p" name="CodLote_p" maxlength="6" required><label class="error">*</label></div>
+                    <div class="field"><div class="edit-options"><div class="edit"></div><div class="delete"></div></div><label for="Fecha">Fecha</label><input type="date" id="Fecha" name="Fecha" value={{ hoy }} required><label class="error">*</label></div>
+                    <h5 class="error">* Este campo es obligatorio</h5>
                     <div class="field"><input class="boton" type="submit" id="Listo" name="Listo" required value="Prestar"></div>
                 </div>
             </div>

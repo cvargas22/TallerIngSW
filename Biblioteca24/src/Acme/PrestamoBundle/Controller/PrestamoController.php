@@ -11,6 +11,9 @@ class PrestamoController extends Controller
 {
     public function nuevoPrestamoAction(Request $request)
     {
+        date_default_timezone_set('UTC');
+        $hoy = date("Y-m-d");
+
     	$em = $this->getDoctrine()->getEntityManager();
     	$rut = $request->get('RUN_p');
     	$codLote = $request->get('CodLote_p');
@@ -29,11 +32,14 @@ class PrestamoController extends Controller
 		    $em->persist($prestamo);
 		    $em->flush();
 
-            return $this->render('PrestamoBundle:Default:nuevoPrestamo.html.twig', 
-            array('prestamo' => $prestamo)
-            );
+            return $this->render('PrestamoBundle:Default:nuevoPrestamo.html.twig', array(
+                'prestamo' => $prestamo, 
+                'hoy' => $hoy
+            ));
     	}
 
-        return $this->render('PrestamoBundle:Default:registroPrestamo.html.twig');
+        return $this->render('PrestamoBundle:Default:registroPrestamo.html.twig', 
+            array('hoy' => $hoy)
+        );
     }
 }
