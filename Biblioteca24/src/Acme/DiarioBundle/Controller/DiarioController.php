@@ -46,12 +46,12 @@ class DiarioController extends Controller
             $em = $this->getDoctrine()->getManager();
             $lote = $em->getRepository('DiarioBundle:Diario')->find($codLote);
             if($lote){
-                return $this->render('DiarioBundle:Default:EncuentraLote.html.twig',
+                return $this->render('DiarioBundle:Default:encuentraLote.html.twig',
                     array('lote' => $lote)
                 );
             }
             else{
-                return $this->render('DiarioBundle:Default:EncuentraLote.html.twig',
+                return $this->render('DiarioBundle:Default:encuentraLote.html.twig',
                     array('lote' => "No")
                 );
             }
