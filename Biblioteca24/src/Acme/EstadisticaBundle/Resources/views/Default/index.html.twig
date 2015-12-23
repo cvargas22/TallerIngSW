@@ -1,18 +1,10 @@
 {% extends '::baseEstadistica.html.twig' %}
 
-{% block title %} Estadistica Prueba {% endblock %}
+{% block title %} Estadisticas {% endblock %}
 
-{% block stylesheets %}
-        <link href="{{ asset('bundles/login/css/estilos.css') }}" type="text/css" rel="stylesheet" />
-{% endblock %}
 {% block javascripts %}
-		<!-- Load jQuery from Google's CDN if needed -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-		<script type="text/javascript" src="{{ asset('bundles/login/js/jquery.validate.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/login/js/additional-methods.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/login/js/messages_es.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/login/js/jquery.Rut.js')}}"></script>
-
+        <script type="text/javascript" src="{{ asset('js/highcharts.js')}}"></script> 
+        <script type="text/javascript" src="{{ asset('js/exporting.js')}}"></script> 
 {% endblock %}
 
 {% block body %}
@@ -34,5 +26,5 @@
     	
     </div>
 </div>
-<script type="text/javascript" src="{{ asset('bundles/login/js/valida_form.js')}}"></script>
+<script type="text/javascript" src="{{ asset('js/valida_form.js')}}"></script>
 {% endblock %}

@@ -19,31 +19,25 @@
             </div>
         </form>
 
-
         <div id="popup">
-        <div id="close">X</div>
-            {% if lote == "No" %}
-                <h3>No existe el lote</h3>
-            {% else %}
-                <h3>Lote encontrado {{ lote }} Ingresado el {{ lote.getFechaIngreso() }}</h3>
-            {% endif %}
+            <div id="close">X</div>
+                {% if lote == "No" %}
+                    <h3>No existe el lote</h3>
+                {% else %}
+                    <h3>Lote encontrado {{ lote }} Ingresado el {{ lote.getFechaIngreso() }}</h3>
+                {% endif %}
+            </div>
         </div>
-</div>
-<script>
-$(document).ready(function(){
-  
-  //chiusura al click sulla parte scura
-  $("#hover").click(function(){
-        $(this).fadeOut();
-    $("#popup").fadeOut();
-    });
-  
-  //chiusura al click sul pulsante
-  $("#close").click(function(){
-        $("#hover").fadeOut();
-    $("#popup").fadeOut();
-    });
-  
-});
-</script>
+        <script>
+            $(document).ready(function(){
+              $("#hover").click(function(){
+                    $(this).fadeOut();
+                $("#popup").fadeOut();
+                });
+              $("#close").click(function(){
+                    $("#hover").fadeOut();
+                $("#popup").fadeOut();
+                });
+            });
+        </script>
 {% endblock %}
