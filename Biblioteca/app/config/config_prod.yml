@@ -3,9 +3,7 @@ imports:
 
 #framework:
 #    validation:
-#        cache: validator.mapping.cache.apc
-#    serializer:
-#        cache: serializer.mapping.cache.apc
+#        cache: apc
 
 #doctrine:
 #    orm:
@@ -21,7 +19,5 @@ monolog:
             handler:      nested
         nested:
             type:  stream
-            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            path:  %kernel.logs_dir%/%kernel.environment%.log
             level: debug
-        console:
-            type:  console
