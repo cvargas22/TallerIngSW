@@ -1,9 +1,13 @@
+estadistica:
+    resource: "@EstadisticaBundle/Resources/config/routing.php"
+    prefix:   /
+
 prestamo:
     resource: "@PrestamoBundle/Resources/config/routing.php"
     prefix:   /
 
-administrador:
-    resource: "@AdministradorBundle/Resources/config/routing.php"
+login:
+    resource: "@LoginBundle/Resources/config/routing.php"
     prefix:   /
 
 diario:
@@ -14,10 +18,7 @@ lector:
     resource: "@LectorBundle/Resources/config/routing.php"
     prefix:   /
 
-login:
-    resource: "@LoginBundle/Resources/config/routing.php"
+administrador:
+    resource: "@AdministradorBundle/Resources/config/routing.php"
     prefix:   /
 
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation

@@ -3,8 +3,8 @@
     <head>
         <title>{% block title %}Welcome!{% endblock %}</title>
         <meta charset="utf-8">
-        {% block stylesheets %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <link href="{{ asset('css/estilos.css') }}" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="{{ asset('js/login.js')}}"></script> 
     </head>
     <body>
         <div id="wrapper">

@@ -1,0 +1,30 @@
+{% extends '::baseEstadistica.html.twig' %}
+
+{% block title %} Estadisticas {% endblock %}
+
+{% block javascripts %}
+        <script type="text/javascript" src="{{ asset('js/highcharts.js')}}"></script> 
+        <script type="text/javascript" src="{{ asset('js/exporting.js')}}"></script> 
+{% endblock %}
+
+{% block body %}
+<div id="contentwrap">
+    <div id="content">
+    	<form id="form" action="" class="form" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8">
+            <h1>Estadística</h1>
+            <div class="content">
+                <div class="intro"></div>
+                <div id="section0" >
+                	<div class="field"><label for="MesI">Desde principios de</label><input type="month" name="MesI" id="MesI" step="1" value="2015-12" required><label class="error">*</label></div>
+                	<div class="field"><label for="MesT">Hasta fines de</label><input type="month" name="MesT" id="MesT" step="1" value="2015-12" required><label class="error">*</label></div>
+                	<h5 class="error">* Este campo es obligatorio</h5>
+                    <div class="field"><input class="boton" type="submit" id="Listo" name="Listo" required value="Graficar"></div>
+                </div>
+            </div>
+        </form>
+        
+    	
+    </div>
+</div>
+<script type="text/javascript" src="{{ asset('js/valida_form.js')}}"></script>
+{% endblock %}
