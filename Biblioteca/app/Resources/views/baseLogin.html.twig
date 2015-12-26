@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta charset="utf-8">
+        <link href="{{ asset('css/estilos.css') }}" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="{{ asset('js/login.js')}}"></script> 
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="headerwrap">
+                <div id="header">
+                    <h1 align="center">Sistema de Préstamos de Diarios</h1>
+                </div>
+            </div>
+            {% block body %}{% endblock %}
+            <div id="footerwrap">
+                <div id="footer">
+                    <h5 align="center">By los Vargas ft. Martin Martin</h5>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

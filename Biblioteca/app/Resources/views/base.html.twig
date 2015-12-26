@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="utf-8">
+        <link href="{{ asset('css/estilos.css') }}" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="{{ asset('js/login.js')}}"></script> 
+        <script type="text/javascript" src="{{ asset('js/jquery-1.8.2.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.validate.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/additional-methods.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/messages_es.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.Rut.js')}}"></script>
+    </head>
+    <body>
+        {% block hover %}{% endblock %}
+        <div id="wrapper">
+            <div id="headerwrap">
+                <div id="header">
+                    <h1 align="center">Sistema de Préstamos de Diarios</h1>
+                </div>
+            </div>
+
+            <div id="navigationwrap">
+                <div id="navigation">
+                    <ul id="menu-bar">
+                        <li id="prestamo" class="not-active"><a href="#">Préstamo</a>
+                            <ul>
+                                <li><a href="nuevoPrestamo" onclick="changeClass('prestamo')">Nuevo prestamo</a></li>
+
+                            </ul>
+                        </li>
+                        <li id="usuarios" class="not-active"><a href="#">Usuarios</a>
+                            <ul>
+                                <li><a href="registroLector" onclick="changeClass('usuarios')">Registrar Lector</a></li>
+                                <li><a href="registroAdministrador" onclick="changeClass('usuarios')">Registrar administrador</a></li>
+                                <li><a href="buscarLector" onclick="changeClass('usuarios')">Buscar usuarios</a></li>
+                            </ul>
+                        </li>
+                        <li id="diarios" class="not-active"><a href="#">Diarios</a>
+                            <ul>
+                                <li><a href="registroLote" onclick="changeClass('diarios')">Registrar lote</a></li>
+                                <li><a href="buscarLote" onclick="changeClass('diarios')">Buscar lote</a></li>
+                            </ul>
+                        </li>
+                        <li id="estadistica" class="not-active"><a href="#">Estadísticas</a>
+                            <ul>
+                                <li><a href="estadistica/edad" onclick="changeClass('estadistica')">Por edad</a></li>
+                                <li><a href="estadistica/sexo" onclick="changeClass('estadistica')">Por sexo</a></li>
+                                <li><a href="estadistica/fecha" onclick="changeClass('estadistica')">Por fechas</a></li>
+                            </ul>
+                        </li>
+                        <li id="salir" class="not-active"><a href="logout" onclick="changeClass('salir')">Salir</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            {% block body %}{% endblock %}
+            <script type="text/javascript" src="{{ asset('js/valida_form.js')}}"></script>
+            <div id="footerwrap">
+                <div id="footer">
+                    <h5 align="center">By los Vargas ft. Martin Martin</h5>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

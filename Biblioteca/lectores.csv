@@ -1,0 +1,22 @@
+rut,nombre,sexo,fnac,direccion,telefono,email,profesion,institucion
+11.111.821-3,Persona13,1,1956-05-21,Direccion1,988304561,usuario@email.com,Contador,
+11.834.431-6,Persona17,2,1994-05-21,Direccion9,988304561,usuario@email.com,Estudiante,Instituto1
+12.061.573-4,Persona11,1,1950-05-21,Direccion4,988304561,usuario@email.com,Profesor,Instituto1
+12.428.274-8,Persona4,2,1960-05-21,Direccion4,988304561,usuario@email.com,Empresario,
+14.576.241-3,Persona5,1,1965-05-21,Direccion1,988304561,usuario@email.com,Politico,Instituto3
+16.353.518-1,Persona3,1,1970-05-21,Direccion3,988304561,usuario@email.com,Contador,
+16.693.229-7,Persona20,1,1982-05-21,Direccion2,988304561,usuario@email.com,Politico,Instituto3
+17.358.794-5,"Tomas Vargas",2,1990-07-27,Direccion,988304561,usuario@email.com,Estudiante,Instituto1
+17.569.057-3,Persona8,1,1978-05-21,Direccion5,988304561,usuario@email.com,Contador,
+19.046.648-5,Persona15,1,1979-05-21,Direccion6,988304561,usuario@email.com,Politico,Instituto3
+21.480.715-7,Persona7,2,1988-05-21,Direccion3,988304561,usuario@email.com,Estudiante,Instituto1
+21.809.435-k,Persona1,1,1985-05-21,Direccion1,988304561,usuario@email.com,Profesor,Instituto1
+21.872.379-9,Persona2,2,1995-05-21,Direccion2,988304561,usuario@email.com,Estudiante,Instituto1
+23.278.021-5,Persona19,2,1980-05-21,Direccion3,988304561,usuario@email.com,Empresario,
+23.772.458-5,Persona12,3,1943-05-21,Direccion2,988304561,usuario@email.com,Estudiante,Instituto1
+24.321.930-2,Persona6,1,1982-05-21,Direccion2,988304561,usuario@email.com,Profesor,Instituto1
+5.114.001-k,Persona14,2,1980-05-21,Direccion4,988304561,usuario@email.com,Empresario,
+5.785.759-5,Persona16,1,1990-05-21,Direccion7,988304561,usuario@email.com,Profesor,Instituto1
+7.200.045-5,Persona10,1,1959-05-21,Direccion6,988304561,usuario@email.com,Politico,Instituto3
+8.058.212-9,Persona9,2,1977-05-21,Direccion3,988304561,usuario@email.com,Empresario,
+9.657.898-9,Persona18,1,1991-05-21,Direccion5,988304561,usuario@email.com,Contador,

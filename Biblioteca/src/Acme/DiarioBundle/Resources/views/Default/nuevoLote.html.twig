@@ -1,0 +1,44 @@
+{% extends '::base.html.twig' %}
+
+{% block title %} Diarios {% endblock %}
+
+{% block hover %}<div id="hover"></div>{% endblock %}
+
+{% block body %}
+<div id="contentwrap">
+    <div id="content">
+        <form id="form" action="" class="form" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8">
+            <h1>Registrar Lote</h1>
+            <div class="content">
+                <div class="intro"></div>
+                <div id="section0" >
+                    <div class="field"><label for="CodLote">Código Lote</label><input type="text" id="CodLote" name="CodLote" maxlength="6" required><label class="error">*</label></div>
+                    <div class="field"><div class="edit-options"><div class="edit"></div><div class="delete"></div></div><label for="Fecha">Fecha</label><input type="date" id="Fecha" name="Fecha" value={{ hoy }} required><label class="error">*</label></div>
+                    <h5 class="error">* Este campo es obligatorio</h5>
+                    <div class="field"><input class="boton" type="submit" id="Listo" name="Listo" required value="Registrar"></div>
+                </div>
+            </div>
+        </form>
+    <div id="popup">
+        <div id="close">X</div>
+            <h3>Diario creado con éxito. Código: {{ diario }}</h3>
+        </div>
+</div>
+<script>
+$(document).ready(function(){
+  
+  //chiusura al click sulla parte scura
+  $("#hover").click(function(){
+        $(this).fadeOut();
+    $("#popup").fadeOut();
+    });
+  
+  //chiusura al click sul pulsante
+  $("#close").click(function(){
+        $("#hover").fadeOut();
+    $("#popup").fadeOut();
+    });
+  
+});
+</script>
+{% endblock %}
