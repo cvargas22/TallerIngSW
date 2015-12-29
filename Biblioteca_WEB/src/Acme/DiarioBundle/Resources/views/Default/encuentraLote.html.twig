@@ -1,0 +1,52 @@
+{% extends '::base.html.twig' %}
+
+{% block title %} Diarios {% endblock %}
+
+{% block hover %}<div id="hover"></div>{% endblock %}
+
+{% block body %}
+
+<form id="form" class="form-horizontal" role="form" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8">
+    <h2>Buscar Lote</h2>
+
+    <div class="form-group">
+        <label class="col-sm-1" for="CodLote_b">Código Lote</label>
+        <div class="col-sm-5"><input type="text" id="CodLote_b" name="CodLote_b" maxlength="12" class="form-control" required></div>
+        <span class="help-block">*</span>
+    </div>
+
+    <span class="help-block">* Este campo es obligatorio</span>
+
+    <div class="form-group">
+        <div class="col-xs-5">
+            <div class="field"><input class="btn btn-lg btn-primary btn-block" type="submit" id="Listo" name="Listo" required value="Buscar"></div>
+        </div>
+    </div>
+    
+</form>
+
+        <div id="popup">
+            <div id="close">X</div>
+                {% if lote == "No" %}
+                    <h3>No existe el lote</h3>
+                {% else %}
+                    <h3>Lote encontrado {{ lote }} Ingresado el {{ lote.getFechaIngreso() }}</h3>
+                {% endif %}
+            
+        </div>
+        <script>
+            $(document).ready(function(){
+              $("#hover").click(function(){
+                    $(this).fadeOut();
+                $("#popup").fadeOut();
+                });
+              $("#close").click(function(){
+                    $("#hover").fadeOut();
+                $("#popup").fadeOut();
+                });
+            });
+        </script>
+
+
+
+{% endblock %}

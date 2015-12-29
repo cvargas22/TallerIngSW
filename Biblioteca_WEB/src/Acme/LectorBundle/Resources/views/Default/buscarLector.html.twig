@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block title %} Usuarios {% endblock %}
+
+
+{% block body %}
+
+<form id="form" class="form-horizontal" role="form" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8">
+    <h2>Buscar Lector</h2>
+    <div class="form-group">
+        <label class="col-sm-1" for="RUN_b">RUN Lector</label>
+        <div class="col-sm-5"><input type="text" id="RUN_b" name="RUN_b" maxlength="12" class="form-control required rut" required></div>        
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-5">
+            <div class="field"><input class="btn btn-lg btn-primary btn-block" type="submit" id="Listo" name="Listo" required value="Buscar"></div>
+        </div>
+    </div>
+    
+</form>
+{% endblock %}
